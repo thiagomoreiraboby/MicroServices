@@ -1,0 +1,63 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Movimentacoes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53197
+        }
+      ],
+      "UpstreamPathTemplate": "/Movimentacoes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Movimentacoes/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53197
+        }
+      ],
+      "UpstreamPathTemplate": "/Movimentacoes/{id}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Lancamentos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53196
+        }
+      ],
+      "UpstreamPathTemplate": "/Lancamentos",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+    //{
+    //  "DownstreamPathTemplate": "/api/Lancamentos",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHost": "localhost",
+    //  "DownstreamPort": 53196,
+    //  "UpstreamPathTemplate": "/Lancamentos",
+    //  "UpstreamHttpMethod": [ "Post" ]
+
+    //}
+    //{
+    //  "DownstreamPathTemplate": "/api/Movimentacoes",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamPort": 53197,
+    //  "DownstreamHost": "localhost",
+    //  "UpstreamPathTemplate": "/Movimentacoes",
+    //  "UpstreamHttpMethod": [ "Post" ],
+    //  "QoSOptions": {
+    //    "ExceptionsAllowedBeforeBreaking": 3,
+    //    "DurationOfBreak": 10,
+    //    "TimeoutValue": 5000
+    //  }
+    //}
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:44384"
+  }
+}
